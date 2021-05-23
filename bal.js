@@ -1,5 +1,5 @@
-var equation = "X2Y+Y2Z->XZ+XY3Z"
-var a = equation.split("->")
+var equation = "X2Y+Y2Z=XZ+XY3Z"
+var a = equation.split("=")
 
 var b = a[0].split("+")
 var c = a[1].split("+")
@@ -295,4 +295,4 @@ for (var i = 1; i < 9; i++) {
 
 
 
-var equation_new = A + "" + b[0] + "+" + B + "" + b[1] + "->" + C + "" + c[0] + "+" + D + "" + c[1]
+var equation_new = A + "" + b[0] + "+" + B + "" + b[1] + "=" + C + "" + c[0] + "+" + D + "" + c[1]
