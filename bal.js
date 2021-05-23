@@ -291,7 +291,6 @@ function nt(n)
 for(var i=1;i<9;i++){
 var fan1,fan2,fan3,fan4;
 fan1=i*A;fan2=i*B;fan3=i*C;fan4=i*D;
-alert(Number(nt(fan1)));
 if(Number(nt(fan1))==0 && Number(nt(fan2))==0 && Number(nt(fan3))==0 && Number(nt(fan4))==0){
     A=fan1;B=fan2;C=fan3;D=fan4;
 break;
