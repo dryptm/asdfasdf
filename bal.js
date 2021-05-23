@@ -251,3 +251,50 @@ else {
         z4[2] = 0
     }
 }
+
+
+
+
+var f1,g1,h1,f2,g2,h2,f3,g3,h3,f4,g4,h4;
+f1=z3[0]*((z4[1]*(-z2[2]))-(z4[2]*(-z2[1])))
+g1=z4[0]*((z3[1]*(-z2[2]))-(z3[2]*(-z2[1])))
+h1=z2[0]*((z3[1]*(z4[2]))-(z4[1]*(z3[2])))
+var determinant=f1-g1+h1;
+f2=z1[0]*((z4[1]*(-z2[2]))-(z4[2]*(-z2[1])))
+g2=z4[0]*((z1[1]*(-z2[2]))-(z1[2]*(-z2[1])))
+h2=z2[0]*((z1[1]*(z4[2]))-(z4[1]*(z1[2])))
+var d_x=f2-g2+h2;
+f3=z3[0]*((z1[1]*(-z2[2]))-(z1[2]*(-z2[1])))
+g3=z1[0]*((z3[1]*(-z2[2]))-(z3[2]*(-z2[1])))
+h3=z2[0]*((z3[1]*(z1[2]))-(z1[1]*(z3[2])))
+var d_y=f3-g3+h3;
+f4=z3[0]*((z4[1]*(z1[2]))-(z4[2]*(z1[1])))
+g4=z4[0]*((z3[1]*(z1[2]))-(z3[2]*(z1[1])))
+h4=z1[0]*((z3[1]*(z4[2]))-(z4[1]*(z3[2])))
+var d_z=f4-g4+h4;
+
+A=1;
+B=d_x/determinant;
+C=d_y/determinant;
+D=d_z/determinant;
+
+
+function nt(n)
+{
+   var result = (n - Math.floor(n)) !== 0; 
+   
+  if (result)
+    return '1';
+   else
+     return '0';
+  }
+for(var i=1;i<9;i++){
+var fan1,fan2,fan3,fan4;
+fan1=i*A;fan2=i*B;fan3=i*C;fan4=i*D;
+alert(Number(nt(fan1)));
+if(Number(nt(fan1))==0 && Number(nt(fan2))==0 && Number(nt(fan3))==0 && Number(nt(fan4))==0){
+    A=fan1;B=fan2;C=fan3;D=fan4;
+break;
+
+}
+}
