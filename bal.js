@@ -256,10 +256,10 @@ zb = z2[2]
 zc = z3[2]
 zd = z4[2]
 
-var det = ((xc * ((yb * zd) - (yd * zb))) - (xd * ((yc * zb) - (yb * zc))) - (xb * ((yc * zd) - (yd * zc))))
-var det_c = ((xa * ((yb * zd) - (yd * zb))) - (xd * ((yb * za) - (ya * zb))) - (xb * ((ya * zd) - (yd * za))))
-var det_d = ((xc * ((yb * za) - (ya * zb))) - (xa * ((yb * zc) - (yc * zb))) - (xb * ((yc * za) - (ya * zc))))
-var det_b = ((xc * ((yd * za) - (ya * zd))) - (xd * ((yc * za) - (ya * zc))) + (xa * ((yc * zd) - (yd * zc))))
+var det = (-(xb * ((yc * zd) - (yd * zc))) - (xc * ((yd * zb) - (yb * zd))) + (xd * ((yc * zb) - (yb * zc))))
+var det_c = ((xa * ((yc * zd) - (yd * zc))) - (xc * ((ya * zd) - (yd * za))) + (xd * ((ya * zc) - (yc * za))))
+var det_d =(-(xb * ((ya * zd) - (yd * za))) - (xa * ((yd * zb) - (yb * zd))) + (xd * ((ya * zb) - (yb * za))))
+var det_b =(-(xb * ((yc * za) - (ya * zc))) - (xc * ((ya * zb) - (yb * za))) + (xa * ((yc * zb) - (yb * zc))))
 
 A = 1;
 B = (det_b / det);
