@@ -7,7 +7,7 @@ var c = a[1].split("+")
 var el = []
 var spread = equation.split('')
 for (var i = 0; i < spread.length; i++) {
-    if (spread[i] == "1" || spread[i] == "2" || spread[i] == "3" || spread[i] == "4" || spread[i] == "5" || spread[i] == "6" || spread[i] == "7" || spread[i] == "8" || spread[i] == "9" || spread[i] == "0" || spread[i] == "+" || spread[i] == "-" || spread[i] == ">") {} else {
+    if (spread[i] == "1" || spread[i] == "2" || spread[i] == "3" || spread[i] == "4" || spread[i] == "5" || spread[i] == "6" || spread[i] == "7" || spread[i] == "8" || spread[i] == "9" || spread[i] == "0" || spread[i] == "+" || spread[i] == "=" ) {} else {
         el.push(spread[i])
     }
 }
@@ -20,7 +20,7 @@ elr = el.filter(function (item, i, ar) {
 var A, B, C, D;
 
 var z1 = [1, 1, 1, 1]
-var z2 = [1, 1, 1, 1, ]
+var z2 = [1, 1, 1, 1]
 var z3 = [1, 1, 1, 1]
 var z4 = [1, 1, 1, 1]
 
