@@ -276,16 +276,16 @@ function nt(n) {
         return '0';
 }
 for (var i = 1; i < 9; i++) {
-    var fan1, fan2, fan3, fan4;
-    fan1 = i * A;
-    fan2 = i * B;
-    fan3 = i * C;
-    fan4 = i * D;
-    if (Number(nt(fan1)) == 0 && Number(nt(fan2)) == 0 && Number(nt(fan3)) == 0 && Number(nt(fan4)) == 0) {
-        A = fan1;
-        B = fan2;
-        C = fan3;
-        D = fan4;
+    var fn1, fn2, fn3, fn4;
+    fn1 = i * A;
+    fn2 = i * B;
+    fn3 = i * C;
+    fn4 = i * D;
+    if (Number(nt(fn1)) == 0 && Number(nt(fn2)) == 0 && Number(nt(fn3)) == 0 && Number(nt(fn4)) == 0) {
+        A = fn1;
+        B = fn2;
+        C = fn3;
+        D = fn4;
         break;
 
     }
