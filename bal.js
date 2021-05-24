@@ -7,7 +7,7 @@ var c = a[1].split("+")
 var el = []
 var spread = equation.split('')
 for (var i = 0; i < spread.length; i++) {
-    if (spread[i] == "1" || spread[i] == "2" || spread[i] == "3" || spread[i] == "4" || spread[i] == "5" || spread[i] == "6" || spread[i] == "7" || spread[i] == "8" || spread[i] == "9" || spread[i] == "0" || spread[i] == "+" || spread[i] == "=" ) {} else {
+    if (spread[i] == "1" || spread[i] == "2" || spread[i] == "3" || spread[i] == "4" || spread[i] == "5" || spread[i] == "6" || spread[i] == "7" || spread[i] == "8" || spread[i] == "9" || spread[i] == "0" || spread[i] == "+" || spread[i] == "=") {} else {
         el.push(spread[i])
     }
 }
@@ -242,29 +242,29 @@ for (var i = 0; i < c[1].length; i++) {
 
 
 
+var xa, ya, za, xb, yb, zb, xc, yc, zc, xd, yd, zd;
+xa = z1[0]
+xb = z2[0]
+xc = z3[0]
+xd = z4[0]
+ya = z1[1]
+yb = z2[1]
+yc = z3[1]
+yd = z4[1]
+za = z1[2]
+zb = z2[2]
+zc = z3[2]
+zd = z4[2]
 
-var f1, g1, h1, f2, g2, h2, f3, g3, h3, f4, g4, h4;
-f1 = z3[0] * ((z4[1] * (-z2[2])) - (z4[2] * (-z2[1])))
-g1 = z4[0] * ((z3[1] * (-z2[2])) - (z3[2] * (-z2[1])))
-h1 = z2[0] * ((z3[1] * (z4[2])) - (z4[1] * (z3[2])))
-var determinant = f1 - g1 + h1;
-f2 = z1[0] * ((z4[1] * (-z2[2])) - (z4[2] * (-z2[1])))
-g2 = z4[0] * ((z1[1] * (-z2[2])) - (z1[2] * (-z2[1])))
-h2 = z2[0] * ((z1[1] * (z4[2])) - (z4[1] * (z1[2])))
-var d_x = f2 - g2 + h2;
-f3 = z3[0] * ((z1[1] * (-z2[2])) - (z1[2] * (-z2[1])))
-g3 = z1[0] * ((z3[1] * (-z2[2])) - (z3[2] * (-z2[1])))
-h3 = z2[0] * ((z3[1] * (z1[2])) - (z1[1] * (z3[2])))
-var d_y = f3 - g3 + h3;
-f4 = z3[0] * ((z4[1] * (z1[2])) - (z4[2] * (z1[1])))
-g4 = z4[0] * ((z3[1] * (z1[2])) - (z3[2] * (z1[1])))
-h4 = z1[0] * ((z3[1] * (z4[2])) - (z4[1] * (z3[2])))
-var d_z = f4 - g4 + h4;
+var det = ((xc * ((yb * zd) - (yd * zb))) - (xd * ((yc * zb) - (yb * zc))) - (xb * ((yc * zd) - (yd * zc))))
+var det_c = ((xa * ((yb * zd) - (yd * zb))) - (xd * ((yb * za) - (ya * zb))) - (xb * ((ya * zd) - (yd * za))))
+var det_d = ((xc * ((yb * za) - (ya * zb))) - (xa * ((yb * zc) - (yc * zb))) - (xb * ((yc * za) - (ya * zc))))
+var det_b = ((xc * ((yd * za) - (ya * zd))) - (xd * ((yc * za) - (ya * zc))) + (xa * ((yc * zd) - (yd * zc))))
 
 A = 1;
-B = d_x / determinant;
-C = d_y / determinant;
-D = d_z / determinant;
+B = (det_b / det);
+C = (det_c / det);
+D = (det_d / det);
 
 
 function nt(n) {
