@@ -317,7 +317,7 @@ function myFunction() {
                 eq3 = eq3 + newz3[i].toString() + "y" + "+"
             }
         }
-        if (newz1[i] != 0) {
+        if (newz3[i] != 0) {
             if (i == 2) {
                 eq3 = eq3 + newz3[i].toString() + "z"
             }
@@ -346,10 +346,13 @@ function myFunction() {
 
 
     var eqx = x7.toString();
+
+
     A = 1
-    B = eqx.split(",")[1]
-    C = eqx.split(",")[3]
-    D = eqx.split(",")[5]
+    B = Number(eqx.split(",")[1])
+    C = Number(eqx.split(",")[3])
+    D = Number(eqx.split(",")[5])
+
     function nt(n) {
         var result = (n - Math.floor(n)) !== 0;
 
@@ -358,13 +361,14 @@ function myFunction() {
         else
             return '0';
     }
+
     for (var i = 1; i < 99; i++) {
         var fan1, fan2, fan3, fan4;
         fan1 = i * A;
         fan2 = i * B;
         fan3 = i * C;
         fan4 = i * D;
-        if (Number(nt(fan1)) == 0 && Number(nt(fan2)) == 0 && Number(nt(fan3)) == 0 && Number(nt(fan4)) == 0) {
+        if (nt(fan1) == 0 && nt(fan2) == 0 && nt(fan3) == 0 && nt(fan4) == 0) {
             A = fan1;
             B = fan2;
             C = fan3;
@@ -373,6 +377,7 @@ function myFunction() {
 
         }
     }
+
 
     var equation_new = A + "" + b[0] + "+" + B + "" + b[1] + "=" + C + "" + c[0] + "+" + D + "" + c[1];
 
